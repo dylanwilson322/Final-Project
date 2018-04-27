@@ -9,15 +9,18 @@ blue=(0,0,255)
 dw=600
 dh=476
 screen=pygame.display.set_mode([dw,dh])
+#assinging the sprite for the car, and the title for the header
 pygame.display.set_caption('Avoid the Hummer')
 pimg=[pygame.image.load(str(i)+'.png') for i in range(1,5)]
 clock=pygame.time.Clock()
 vec=pygame.math.Vector2
 bg=pygame.image.load('bg.png')
 bw=bg.get_width()
+#set of random hummer dimensions for the game
 blist=[[50,310],[60,300],[70,290],[80,280],[90,270],[100,260],[110,250],[120,240],[130,230],[140,220],[150,210],[160,200],[170,190],[180,180],
        [190,170],[200,160],[210,150],[220,140],[230,130],[240,120],[250,110],[260,100],[270,90],[280,80]
        ,[290,70],[300,60],[310,50]]
+#code for the size and characteristics of the ferrari
 class Bird(pygame.sprite.Sprite):
    def __init__(self,game):
       super().__init__()
@@ -29,6 +32,7 @@ class Bird(pygame.sprite.Sprite):
       self.acc=vec(0,0)
       self.pos=vec(self.rect.center)
       self.fc=0
+#keypress functions for the car
    def update(self):
       self.acc=vec(0,1.5)
       self.vel=vec(0,0)  
@@ -52,6 +56,7 @@ class Bird(pygame.sprite.Sprite):
          self.pos.y=dh-self.rect.width/2
       self.rect.center=self.pos
       self.mask=pygame.mask.from_surface(self.image)
+       #sprite for the top hummer, and characteristics
 class TBlock(pygame.sprite.Sprite):
    def __init__(self,x,h1):
       super().__init__()
@@ -62,6 +67,7 @@ class TBlock(pygame.sprite.Sprite):
    def update(self):
       self.rect.x-=2
       self.mask1=pygame.mask.from_surface(self.image)
+       #sprite for the botom hummer, and characteristics
 class BBlock(pygame.sprite.Sprite):
    def __init__(self,x,h2):
       super().__init__()
@@ -72,6 +78,7 @@ class BBlock(pygame.sprite.Sprite):
    def update(self):
       self.rect.x-=2
       self.mask2=pygame.mask.from_surface(self.image)
+#overall class for the game itself
 class Game:
    def __init__(self):
       self.bgx=0
@@ -83,6 +90,7 @@ class Game:
       self.last=pygame.time.get_ticks()
    def blockgen(self):
       x=random.randint(620,650)
+#assigning a randint for the hummer dimensions
       h=random.choice(blist)
       h1=h[0]
       h2=h[1]
@@ -108,6 +116,7 @@ class Game:
       self.all_sprites.add(self.bblock)
       self.score=0
       self.gover=0
+#assigning the text value for all the text popups
    def msg(self,text,x,y,color,size):
       self.font=pygame.font.SysFont('georgia',size,bold=1)
       msgtxt=self.font.render(text,1,color)
@@ -116,6 +125,7 @@ class Game:
       screen.blit(msgtxt,(msgrect.center))
    def pause(self):
       wait=1
+#functions for what to do if the game is paused or quit
       while wait:
          for event in pygame.event.get():
             if event.type==pygame.QUIT:
@@ -137,13 +147,14 @@ class Game:
             if event.type==pygame.KEYDOWN:
                if event.key==pygame.K_RETURN:
                   wait=0
+   #message for game quit
          self.msg("Gameover",dw-150,dh-100,red,40)
          self.msg("Press Enter to Play Again",dw-545,dh+200,red,40)
          pygame.display.flip()
       self.new()
    def scores(self):
          self.msg("Score:"+str(self.score),dw-130,200,green,30)
-      
+       #funtion for when the obsticle collides with hummer
    def update(self):
      self.all_sprites.update()
      now=pygame.time.get_ticks()
@@ -164,7 +175,7 @@ class Game:
          self.score+=1
      else:
         self.score+=0
-         
+   #keypress functions
    def draw(self):
       self.all_sprites.draw(screen)
       self.scores()
