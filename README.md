@@ -14,4 +14,4 @@ Currently. I changed the game into a game where you are driving a ferrari from a
 
 Week 4/23
 
-I have not changed anything since the last week due to the fact that I have run into a few issues. Ever since last week, I have not been able to run my code due to the fact that my 1.png file cannot open. Due to this, I am in a stuck at a brick wall type of situation. Once I get this sorted out, I will be able to continue with my personalization plan. 
+I have not changed anything since the last week due to the fact that I have run into a few issues. Ever since last week, I have not been able to run my code due to the fact that my 1.png file cannot open. Due to this, I am in a stuck at a brick wall type of situation. Once I get this sorted out, I will be able to continue with my personalization plan. Also, I added comments to all the code thus far, and the code is understanable. 
