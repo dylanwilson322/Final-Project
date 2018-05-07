@@ -4,7 +4,7 @@ I have had many ideas for this project. However, from the start, I gravitated to
 
 After this, I decided to go for a rendition of the Lollipop Ninja game. However, I simply could not figure out how I could change the game in a way to make it mine. 
 
-4/09
+Week 4/09
 
 I decided to finally go with a code I found on github,com, which is flappy bird. After changing the sprites many times and finally finding a theme that works well, I have decided to make that the project for now. The code can be located at https://github.com/Mariii123/Flappy-bird. 
 
@@ -15,3 +15,7 @@ Currently. I changed the game into a game where you are driving a ferrari from a
 Week 4/23
 
 I have not changed anything since the last week due to the fact that I have run into a few issues. Ever since last week, I have not been able to run my code due to the fact that my 1.png file cannot open. Due to this, I am in a stuck at a brick wall type of situation. Once I get this sorted out, I will be able to continue with my personalization plan. Also, I added comments to all the code thus far, and the code is understanable. 
+
+Week 4/30
+
+This week, the main aspect of the project I tried working on was implimenting an aspect of Lollipop Ninja into my "flappy bird-esqe" game. In the lollipop ninja game, there is a portion of the game that allows the user to make the ninja invisible by pressing x. I tried to adapt this code into my game, I was not able to make this work. So, for the progress check from last week, nothing has changed. However, in this final week, I plan to add music, and a start screen. 
