@@ -19,3 +19,7 @@ I have not changed anything since the last week due to the fact that I have run 
 Week 4/30
 
 This week, the main aspect of the project I tried working on was implimenting an aspect of Lollipop Ninja into my "flappy bird-esqe" game. In the lollipop ninja game, there is a portion of the game that allows the user to make the ninja invisible by pressing x. I tried to adapt this code into my game, I was not able to make this work. So, for the progress check from last week, nothing has changed. However, in this final week, I plan to add music, and a start screen. 
+
+Week 5/14
+
+This is it. The final week. I have added a few changes that have make my code nice and customizable, but I have had a struggle making these changes actually work. The two codes that I used were from yoyutube and they are: https://www.youtube.com/watch?v=33g62PpFwsE&list=PLsk-HSGFjnaH5yghzu7PcOzm9NhsW0Urw&index=5. I used this code in order to have randonly spawning hummers that would float around the screen,  but they will not show up for some reason. The second code I used was https://www.youtube.com/watch?v=3RJx34kGRGk&t=200s. This code was for a start screen, yet for some reason I could not even get it to work. 
